@@ -4,10 +4,13 @@ EFI and resources for doing hackintosh on the Acer Aspire V5-573P-74508G1.
 ## Instructions
 *Copy the EFI folder on your installer USB to boot. <br/>
 *Install macOS. (I'm using APFS file system on my SSD) <br/>
-*Once installed, copy /Library/Extensions to /Library/Extensions :) <br/>
 *If something fails, refer to [RehabMan's guide](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/) for laptops.
 
 ## Post Installation
+*Once installed, copy /Library/Extensions to /Library/Extensions and do... :) <br/>
+```bash
+sudo kextcache -i /  
+```
 For keyboard layout (the latin american one) - Using A layout. <br/>
 Thanks to neosergio for [this](https://github.com/neosergio/Latam-Keyboard). 
 ```bash
@@ -23,16 +26,20 @@ Download [Clover Configurator](https://mackie100projects.altervista.org/download
 *Battery indicator <br/>
 *Touchscreen (before Catalina, working fine for 1 finger on Mojave) <br/>
 *Full 8gb's of ram <br/>
-*Trackpad 
+*Trackpad <br/>
+*Keyboard backligth <br/>
+*Some fn keys
 
 ## What's sometimes working
 *Brightness, if the slider dissapears, just wait until next OS update and it will appear again (idk why). <br/>
 *HDMI video output (it worked on Mojave, as far as I can remember)
 
+
 ## What's not working
 *Power off. (Restart to clover and press the power button) <br/>
 *Wifi / Bluetooth (Using bluetooth from an Intel card and Ethernet myself) <br/>
+*HDMI audio output. (never tried, I asume it never worked)
 *Native audio (have used VoodooHDA in the past, trying to get Apple ALC working but can't seem to be able to figure the correct layout for this ALC 282.)
 
 ## Special thanks
-[USB Map](https://github.com/corpnewt/USBMap)
+[USB Map](https://github.com/corpnewt/USBMap) - corpnewt's tool
