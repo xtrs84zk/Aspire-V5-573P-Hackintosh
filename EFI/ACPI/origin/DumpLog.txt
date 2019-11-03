@@ -1,0 +1,80 @@
+3:186  1:073  Found UEFI Acpi 2.0 RSDP at 9AFFE014
+3:186  0:000  Saving ACPI tables from RSDP 9AFFE014 to EFI\CLOVER\ACPI\origin ...
+3:186  0:000   9AFFE014: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36 -> RSDP.aml
+3:189  0:003    (Xsdt: 9AFFE210, Rsdt: 9AFFE124)
+3:189  0:000    9AFFE210: 'XSDT', 'ACRPRDCT', Rev: 1, Len: 172 -> XSDT.aml
+3:193  0:003    9AFFE124: 'RSDT', 'ACRPRDCT', Rev: 1, Len: 104 -> RSDT.aml
+3:197  0:004    Tables in Xsdt: 17
+3:197  0:000    0. 9AFF8000: 'FACP', 'ACRPRDCT', Rev: 5, Len: 268 -> FACP.aml
+3:201  0:004        (Dsdt: 9AFE6000, Facs: 9AFBA000, XDsdt: 9AFE6000, XFacs: 0)
+3:201  0:000        9AFE6000: 'DSDT', 'ACRPRDCT', Rev: 1, Len: 60408 -> DSDT.aml
+3:228  0:026        9AFBA000: 'FACS', Ver: 2, Len: 64 -> FACS.aml
+3:230  0:002    1. 9AFFD000: 'UEFI', 'ACRPRDCT', Rev: 1, Len: 566 -> UEFI.aml
+3:234  0:003    2. 9AFFB000: 'FPDT', 'ACRPRDCT', Rev: 1, Len: 68 -> FPDT.aml
+3:239  0:004    3. 9AFFA000: 'MSDM', 'ACRPRDCT', Rev: 3, Len: 85 -> MSDM.aml
+3:243  0:004    4. 9AFF9000: 'ASF!', 'ACRPRDCT', Rev: 32, Len: 165 -> ASF!.aml
+3:248  0:004    5. 9AFF7000: 'HPET', 'ACRPRDCT', Rev: 1, Len: 56 -> HPET.aml
+3:252  0:004    6. 9AFF6000: 'APIC', 'ACRPRDCT', Rev: 3, Len: 140 -> APIC.aml
+3:256  0:004    7. 9AFF5000: 'MCFG', 'ACRPRDCT', Rev: 1, Len: 60 -> MCFG.aml
+3:260  0:004    8. 9AFE4000: 'BOOT', 'ACRPRDCT', Rev: 1, Len: 40 -> BOOT.aml
+3:265  0:004    9. 9AFE3000: 'LPIT', 'ACRPRDCT', Rev: 1, Len: 148 -> LPIT.aml
+3:269  0:004    10. 9AFE1000: 'ASPT', 'ACRPRDCT', Rev: 7, Len: 52 -> ASPT.aml
+3:272  0:002    11. 9AFE0000: 'DBGP', 'ACRPRDCT', Rev: 1, Len: 52 -> DBGP.aml
+3:276  0:004    12. 9AFDF000: 'SSDT', 'ACRPRDCT', Rev: 1, Len: 1337 -> SSDT-0-ACRPRDCT.aml
+3:281  0:005    13. 9AFDE000: 'SSDT', 'ACRPRDCT', Rev: 1, Len: 2776 -> SSDT-1-ACRPRDCT.aml (Found hidden SSDT 4 pcs)
+3:285  0:003        * 98357598: '>0x0', 'ing>
+			', Rev: 48, Len: 943075889  3E 30 78 30 31 32 36 38 30 38 36 3C 2F 73 74 72 
+3:285  0:000        * 9AE78618: 'SSDT', 'ApIst', Rev: 1, Len: 1450  53 53 44 54 AA 05 00 00 01 C6 50 6D 52 65 66 00 Internal length = 1450 -> SSDT-x1_0-ApIst.aml
+3:291  0:006        * 9AE78C18: 'SSDT', 'Cpu0Cst', Rev: 1, Len: 979  53 53 44 54 D3 03 00 00 01 A6 50 6D 52 65 66 00 Internal length = 979 -> SSDT-x1_1-Cpu0Cst.aml
+3:298  0:006        * 9AE77D98: 'SSDT', 'ApCst', Rev: 1, Len: 281  53 53 44 54 19 01 00 00 01 E2 50 6D 52 65 66 00 Internal length = 281 -> SSDT-x1_2-ApCst.aml
+3:311  0:013  
+3:311  0:000    14. 9AFDB000: 'SSDT', 'ACRPRDCT', Rev: 1, Len: 12013 -> SSDT-2-ACRPRDCT.aml
+3:316  0:004    15. 9AFDA000: 'SSDT', 'ACRPRDCT', Rev: 1, Len: 2230 -> SSDT-3-ACRPRDCT.aml
+3:329  0:013    16. 9AFD9000: 'BGRT', 'ACRPRDCT', Rev: 1, Len: 56 -> BGRT.aml
+3:334  0:004    Tables in Rsdt: 17
+3:334  0:000    0. 9AFF8000: 'FACP', 'ACRPRDCT', Rev: 5, Len: 268
+3:334  0:000        (Dsdt: 9AFE6000, Facs: 9AFBA000, XDsdt: 9AFE6000, XFacs: 0)
+3:334  0:000        9AFE6000: 'DSDT', 'ACRPRDCT', Rev: 1, Len: 60408
+3:335  0:001        9AFBA000: 'FACS', Ver: 2, Len: 64
+3:335  0:000    1. 9AFFD000: 'UEFI', 'ACRPRDCT', Rev: 1, Len: 566
+3:335  0:000    2. 9AFFB000: 'FPDT', 'ACRPRDCT', Rev: 1, Len: 68
+3:335  0:000    3. 9AFFA000: 'MSDM', 'ACRPRDCT', Rev: 3, Len: 85
+3:335  0:000    4. 9AFF9000: 'ASF!', 'ACRPRDCT', Rev: 32, Len: 165
+3:336  0:000    5. 9AFF7000: 'HPET', 'ACRPRDCT', Rev: 1, Len: 56
+3:336  0:000    6. 9AFF6000: 'APIC', 'ACRPRDCT', Rev: 3, Len: 140
+3:336  0:000    7. 9AFF5000: 'MCFG', 'ACRPRDCT', Rev: 1, Len: 60
+3:336  0:000    8. 9AFE4000: 'BOOT', 'ACRPRDCT', Rev: 1, Len: 40
+3:336  0:000    9. 9AFE3000: 'LPIT', 'ACRPRDCT', Rev: 1, Len: 148
+3:336  0:000    10. 9AFE1000: 'ASPT', 'ACRPRDCT', Rev: 7, Len: 52
+3:336  0:000    11. 9AFE0000: 'DBGP', 'ACRPRDCT', Rev: 1, Len: 52
+3:336  0:000    12. 9AFDF000: 'SSDT', 'ACRPRDCT', Rev: 1, Len: 1337
+3:336  0:000    13. 9AFDE000: 'SSDT', 'ACRPRDCT', Rev: 1, Len: 2776
+3:336  0:000    14. 9AFDB000: 'SSDT', 'ACRPRDCT', Rev: 1, Len: 12013
+3:336  0:000    15. 9AFDA000: 'SSDT', 'ACRPRDCT', Rev: 1, Len: 2230
+3:336  0:000    16. 9AFD9000: 'BGRT', 'ACRPRDCT', Rev: 1, Len: 56
+3:336  0:000  Found UEFI Acpi 1.0 RSDP at 9AFFE000
+3:336  0:000  Printing ACPI tables from RSDP 9AFFE000 ...
+3:336  0:000   9AFFE000: 'RSD PTR ', Rev: 0 (Acpi 1.0), Len: 20
+3:336  0:000    (Rsdt: 9AFFE038)
+3:336  0:000    9AFFE038: 'RSDT', 'ACRPRDCT', Rev: 1, Len: 104
+3:336  0:000    Tables in Rsdt: 17
+3:336  0:000    0. 9AFF8000: 'FACP', 'ACRPRDCT', Rev: 5, Len: 268
+3:336  0:000        (Dsdt: 9AFE6000, Facs: 9AFBA000, XDsdt: 9AFE6000, XFacs: 0)
+3:336  0:000        9AFE6000: 'DSDT', 'ACRPRDCT', Rev: 1, Len: 60408
+3:337  0:001        9AFBA000: 'FACS', Ver: 2, Len: 64
+3:337  0:000    1. 9AFFD000: 'UEFI', 'ACRPRDCT', Rev: 1, Len: 566
+3:337  0:000    2. 9AFFB000: 'FPDT', 'ACRPRDCT', Rev: 1, Len: 68
+3:337  0:000    3. 9AFFA000: 'MSDM', 'ACRPRDCT', Rev: 3, Len: 85
+3:337  0:000    4. 9AFF9000: 'ASF!', 'ACRPRDCT', Rev: 32, Len: 165
+3:337  0:000    5. 9AFF7000: 'HPET', 'ACRPRDCT', Rev: 1, Len: 56
+3:337  0:000    6. 9AFF6000: 'APIC', 'ACRPRDCT', Rev: 3, Len: 140
+3:337  0:000    7. 9AFF5000: 'MCFG', 'ACRPRDCT', Rev: 1, Len: 60
+3:337  0:000    8. 9AFE4000: 'BOOT', 'ACRPRDCT', Rev: 1, Len: 40
+3:337  0:000    9. 9AFE3000: 'LPIT', 'ACRPRDCT', Rev: 1, Len: 148
+3:337  0:000    10. 9AFE1000: 'ASPT', 'ACRPRDCT', Rev: 7, Len: 52
+3:337  0:000    11. 9AFE0000: 'DBGP', 'ACRPRDCT', Rev: 1, Len: 52
+3:337  0:000    12. 9AFDF000: 'SSDT', 'ACRPRDCT', Rev: 1, Len: 1337
+3:337  0:000    13. 9AFDE000: 'SSDT', 'ACRPRDCT', Rev: 1, Len: 2776
+3:337  0:000    14. 9AFDB000: 'SSDT', 'ACRPRDCT', Rev: 1, Len: 12013
+3:337  0:000    15. 9AFDA000: 'SSDT', 'ACRPRDCT', Rev: 1, Len: 2230
+3:337  0:000    16. 9AFD9000: 'BGRT', 'ACRPRDCT', Rev: 1, Len: 56

@@ -1,0 +1,3 @@
+[submodule "Latam-Keyboard"]
+	path = Latam-Keyboard
+	url = https://github.com/neosergio/Latam-Keyboard.git
