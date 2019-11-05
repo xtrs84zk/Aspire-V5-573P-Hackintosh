@@ -1,13 +1,14 @@
 # Aspire V5-573P Hackintosh
 EFI and resources for doing hackintosh on the Acer Aspire V5-573P-74508G1.
 
+![Screenshot](screenshot.png)
 ## Instructions
-*Copy the EFI folder on your installer USB to boot. <br/>
-*Install macOS. (I'm using APFS file system on my SSD) <br/>
-*If something fails, refer to [RehabMan's guide](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/) for laptops.
+Copy the EFI folder on your installer USB to boot. <br/>
+Install macOS. (I'm using APFS file system on my SSD) <br/>
+If something fails, refer to [RehabMan's guide](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/) for laptops.
 
 ## Post Installation
-*Once installed, copy /Library/Extensions to /Library/Extensions and do... :) <br/>
+Once installed, copy /Library/Extensions to /Library/Extensions and do... :) <br/>
 ```bash
 sudo kextcache -i /  
 ```
@@ -17,29 +18,31 @@ Thanks to neosergio for [this](https://github.com/neosergio/Latam-Keyboard).
 git clone https://github.com/neosergio/Latam-Keyboard.git && cd Latam-Keyboard && cp -v Latam*.* ~/Library/Keyboard\ Layouts/
 ```
 
-Download [Clover Configurator](https://mackie100projects.altervista.org/download-clover-configurator/) and configure your serial number, the one on the plist is a scramble of the one I'm using. For iMessage and so, use this guide to configure: [An iDiot's Guide To iMessage](https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/) .
+Download [Clover Configurator](https://mackie100projects.altervista.org/download-clover-configurator/) and configure your serial number, the one on the plist is a scramble of the one I'm using. As for how to configure it, the correct way is described here: [An iDiot's Guide To iMessage](https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/) .
 
 ## What's working
-*USB ports <br/>
-*Sleep <br/>
-*Integrated Graphics <br/>
-*Battery indicator <br/>
-*Touchscreen (before Catalina, working fine for 1 finger on Mojave) <br/>
-*Full 8gb's of ram <br/>
-*Trackpad <br/>
-*Keyboard backligth <br/>
-*Some fn keys
+USB ports <br/>
+Sleep <br/>
+Integrated Graphics <br/>
+Battery indicator <br/>
+Full 8gb's of ram <br/>
+Trackpad <br/>
+Keyboard backligth <br/>
+Some fn keys
 
 ## What's sometimes working
-*Brightness, if the slider dissapears, just wait until next OS update and it will appear again (idk why). <br/>
-*HDMI video output (it worked on Mojave, as far as I can remember)
+Touchscreen (before Catalina, working fine for 1 finger on Mojave) <br/>
+Audio with VoodooHDA. (Still trying to get Apple ALC to work on ALC 282) <br/>
+Brightness, if the slider dissapears, just wait until next OS update and it will appear again (idk why). <br/>
+HDMI video output (it worked on Mojave, as far as I can remember) <br/>
+It migth freeze the next couple of reboots after a System Update, that's why it's advised to always do a clean install rather than upgrade.
 
 
 ## What's not working
-*Power off. (Restart to clover and press the power button) <br/>
-*Wifi / Bluetooth (Using bluetooth from an Intel card and Ethernet myself) <br/>
-*HDMI audio output. (never tried, I asume it never worked)
-*Native audio (have used VoodooHDA in the past, trying to get Apple ALC working but can't seem to be able to figure the correct layout for this ALC 282.)
+Power off. (Restart to clover and press the power button) <br/>
+Wifi / Bluetooth (Using bluetooth from an Intel card and Ethernet myself) <br/>
+HDMI audio output. (never tried, I asume it never worked)
 
 ## Special thanks
-[USB Map](https://github.com/corpnewt/USBMap) - corpnewt's tool
+[USB Map](https://github.com/corpnewt/USBMap) - corpnewt's tool <br/>
+[VoodooHDA](https://github.com/chris1111/VoodooHDA-2.9.2-Clover-V14) - Yeah, we hate it, we love it.

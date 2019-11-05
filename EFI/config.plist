@@ -326,7 +326,7 @@
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
-			<integer>86</integer>
+			<string>Detect</string>
 			<key>ResetHDA</key>
 			<true/>
 		</dict>
@@ -489,7 +489,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02511104CDGF2C8C</string>
+		<string>C02551609QXGF2C8C</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -526,9 +526,9 @@
 		<key>ProductName</key>
 		<string>MacBookPro11,5</string>
 		<key>SerialNumber</key>
-		<string>C02PF9Z2G85Y</string>
+		<string>C02QV0CMG85Y</string>
 		<key>SmUUID</key>
-		<string>470CAB6E-80A7-4CD4-826D-A2B68C5F8065</string>
+		<string>905BBDC4-EC66-4CFA-B32A-BE4C8E25E0B1</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
