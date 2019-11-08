@@ -21,6 +21,8 @@
 				<true/>
 				<key>AddMCHC</key>
 				<true/>
+				<key>AddPNLF</key>
+				<true/>
 				<key>DeleteUnused</key>
 				<true/>
 				<key>FixDarwin</key>
@@ -335,6 +337,10 @@
 			<key>IntelGFX</key>
 			<string>0x04128086</string>
 		</dict>
+		<key>SetIntelBacklight</key>
+		<false/>
+		<key>SetIntelMaxBacklight</key>
+		<false/>
 		<key>USB</key>
 		<dict>
 			<key>AddClockID</key>
@@ -489,7 +495,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02551609QXGF2C8C</string>
+		<string>C025312004NGF2C1F</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -526,16 +532,18 @@
 		<key>ProductName</key>
 		<string>MacBookPro11,5</string>
 		<key>SerialNumber</key>
-		<string>C02QV0CMG85Y</string>
+		<string>C02Q5GYVG85Y</string>
 		<key>SmUUID</key>
-		<string>905BBDC4-EC66-4CFA-B32A-BE4C8E25E0B1</string>
+		<string>E71B15A4-7596-4660-BF04-5A17F038D345</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
+		<key>BacklightLevel</key>
+		<string>0x020</string>
 		<key>CustomUUID</key>
-		<string>AED180EB-E8AD-546C-847E-E30E770D7DA5</string>
+		<string>BCC80992-7434-439A-940D-A219BF526CE5</string>
 		<key>ExposeSysVariables</key>
 		<true/>
 		<key>InjectKexts</key>
