@@ -9,16 +9,11 @@ EFI and resources for doing hackintosh on the Acer Aspire V5-573P-74508G1.
 4. Feel free to reach out if you need any help or found how to fix something. [Telegram](https://t.me/xtrs84zk) | [Twitter](https://twitter.com/xtrs84zk) 
 
 ## Post Installation
-Once installed, copy /Library/Extensions to /Library/Extensions and repair permisions. Read [this guide](https://www.tonymacx86.com/threads/guide-installing-3rd-party-kexts-el-capitan-sierra-high-sierra-mojave-catalina.268964/) for instructions on how to install correctly the kernels. [Hackintool](https://www.tonymacx86.com/threads/release-hackintool-v2-8-6.254559/) is a great tool to do this job. 
+Per Vanilla method, there shouldn't be any "special" needs, in case your setup differs from the one used by this guide, place the needed kext on /Library/Extensions and run
 ```bash
-git clone https://github.com/xtrs84zk/Aspire-V5-573P-Hackintosh.git &&
-cd Aspire-V5-573P-Hackintosh  
-```
-If you ever need to install some extra kext (I'm using one for an external ethernet card), just copy them to /Library/Extensions and run 
-
-```bash 
 sudo kextcache -i / 
 ```
+or... move them to /EFI/Clover/kexts/Others and don't run anything :)
 
 For keyboard layout (the latin american one) - Using B layout. <br/>
 Thanks to neosergio for [this](https://github.com/neosergio/Latam-Keyboard). 
@@ -27,7 +22,7 @@ Thanks to neosergio for [this](https://github.com/neosergio/Latam-Keyboard).
 git clone https://github.com/neosergio/Latam-Keyboard.git && cd Latam-Keyboard && cp -v Latam*.* ~/Library/Keyboard\ Layouts/
 ```
 
-Download [Clover Configurator](https://mackie100projects.altervista.org/download-clover-configurator/) and configure your serial number, the one on the plist is a scramble of the one I'm using. As for how to configure it, the correct way is described here: [An iDiot's Guide To iMessage](https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/) .
+Download [Clover Configurator](https://mackie100projects.altervista.org/download-clover-configurator/) and configure your serial number, uuid, and other identifiers. The ones on the plist are a scramble of the ones I'm using. As for how to configure it, the correct way is described here: [An iDiot's Guide To iMessage](https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/) .
 
 ## Some fixes
 
@@ -68,6 +63,8 @@ New fixes are always welcome. Just issue or send a pull request. Don't forget to
 
 ## Special thanks
 * [USB Map](https://github.com/corpnewt/USBMap) - corpnewt's tool <br/>
+* [Fewtarius's](https://fewtarius.gitbook.io/laptopguide/) - For the vanilla laptop guide. <br/>
 * [VoodooHDA](https://github.com/chris1111/VoodooHDA-2.9.2-Clover-V14) - Yeah, we hate it, we love it. <br/>
-* [Hackintool](https://www.tonymacx86.com/threads/release-hackintool-v2-8-6.254559/) - For making it easier on newer releases.
-* [trs96](https://www.tonymacx86.com/threads/appstore-the-operation-couldnt-be-completed-com-apple-commerce-client-error-500.270957/post-1912788) -  For the solution to error 500 on AppStore.
+* [Hackintool](https://www.tonymacx86.com/threads/release-hackintool-v2-8-6.254559/) - For making it easier on newer releases. <br/>
+* [trs96](https://www.tonymacx86.com/threads/appstore-the-operation-couldnt-be-completed-com-apple-commerce-client-error-500.270957/post-1912788) -  For the solution to error 500 on AppStore. <br/>
+* [Acidanthera](https://github.com/acidanthera/VoodooPS2) - For the macOS like trackpad experience.
