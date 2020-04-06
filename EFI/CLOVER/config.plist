@@ -313,6 +313,14 @@
 	<dict>
 		<key>EmbeddedThemeType</key>
 		<string>Dark</string>
+		<key>Hide</key>
+		<array>
+			<string>HD5</string>
+			<string>Filevault</string>
+			<string>Recovery</string>
+			<string>Preboot</string>
+			<string>HD4</string>
+		</array>
 		<key>Language</key>
 		<string>en:0</string>
 		<key>Mouse</key>
@@ -326,10 +334,12 @@
 			<key>Speed</key>
 			<integer>8</integer>
 		</dict>
+		<key>Scan</key>
+		<true/>
 		<key>ScreenResolution</key>
 		<string>1366x768</string>
 		<key>Theme</key>
-		<string>appledark</string>
+		<string>minimaldark</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -439,7 +449,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C025312004NGF2C1F</string>
+		<string>C025233104NGF2CAD</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -476,16 +486,16 @@
 		<key>ProductName</key>
 		<string>MacBookPro11,5</string>
 		<key>SerialNumber</key>
-		<string>C02Q5GYVG85Y</string>
+		<string>C02PTAYHG85Y</string>
 		<key>SmUUID</key>
-		<string>E71B15A4-7596-4660-BF04-5A17F038D345</string>
+		<string>A2C91E52-8658-4756-B1D6-3F7EF5276B76</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
 		<key>CustomUUID</key>
-		<string>BCC80992-7434-439A-940D-A219BF526CE5</string>
+		<string>40C82370-E226-5A06-8227-E3A30155E049</string>
 		<key>ExposeSysVariables</key>
 		<true/>
 		<key>InjectKexts</key>
