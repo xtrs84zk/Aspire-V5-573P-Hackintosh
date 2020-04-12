@@ -27,7 +27,7 @@ Thanks to neosergio for [this](https://github.com/neosergio/Latam-Keyboard).
 git clone https://github.com/neosergio/Latam-Keyboard.git && cd Latam-Keyboard && cp -v Latam*.* ~/Library/Keyboard\ Layouts/
 ```
 
-Download [Clover Configurator](https://mackie100projects.altervista.org/download-clover-configurator/) and configure your serial number, uuid, and other identifiers. The ones on the plist are a scramble of the ones I'm using. As for how to configure it, the correct way is described here: [An iDiot's Guide To iMessage](https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/) .
+Download [Clover Configurator](https://mackie100projects.altervista.org/download-clover-configurator/) and configure your serial number, uuid, and other identifiers. Don't forget to write a MAC on EFI/CLOVER/ACPI/patched/SSDT-RMNE.aml for Siri and iMessage. The ones on the plist are a scramble of the ones I'm using. As for how to configure it, the correct way is described here: [An iDiot's Guide To iMessage](https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/) .
 
 ## Some fixes
 
@@ -51,11 +51,13 @@ defaults write com.apple.appstore.commerce Storefront -string \
 * Some Fn keys migth have diferent behavior.
 * Audio with VoodooHDA. 
 * Brightness. Use "pausa" to up the level and Fn+F12 to lower it. (Working on setting the rigth keycombo)
-* Touchscreen (before Catalina, working fine on Mojave: same gestures as the trackpad) <br/> <br/>
+* Touchscreen (before Catalina, working fine on Mojave: same gestures as the trackpad) <br/>
+* Siri, Nice. <br/>
 
 ## What's sometimes working
 * HDMI video output ~~(it worked on Mojave, as far as I can remember)~~ guess what? I'm back in Mojave and it doesn't work... but I remember it did.<br/>
-* It migth freeze the next couple of reboots after a System Update, that's why it's advised to always do a clean install rather than upgrade. Don't worry, it'll go back to normal after that. 
+* It migth freeze the next couple of reboots after a System Update, that's why it's advised to always do a clean install rather than upgrade. Don't worry, it'll go back to normal after that. <br/>
+* Microphone. Well, it works, but is way too boosted.
 
 ## What's not working
 * Power off. (Restart to clover and press the power button) <br/>
