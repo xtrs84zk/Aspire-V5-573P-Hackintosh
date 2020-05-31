@@ -1,4 +1,8 @@
 # Aspire V5-573P Hackintosh
+## OpenCore branch (WIP)
+
+- Ain't working yet, go ahead and grab the master branch.
+
 EFI and resources for doing hackintosh on the Acer Aspire V5-573P-74508G1.
 
 ![Screenshot](screenshot.png)
