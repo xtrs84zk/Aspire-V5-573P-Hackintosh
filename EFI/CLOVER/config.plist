@@ -207,7 +207,7 @@
 		<key>DefaultLoader</key>
 		<string>boot.efi</string>
 		<key>DefaultVolume</key>
-		<string>LastBootedVolume</string>
+		<string>macOS</string>
 		<key>Legacy</key>
 		<string>PBR</string>
 		<key>NeverHibernate</key>
@@ -320,6 +320,8 @@
 			<string>Recovery</string>
 			<string>Preboot</string>
 			<string>HD4</string>
+			<string>Legacy</string>
+			<string>Install</string>
 		</array>
 		<key>Language</key>
 		<string>en:0</string>
@@ -385,20 +387,6 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Fix IO Error ICH10</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>RYX2D5XCiciD4P5mhcl4D4TSdQs=</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>AppleAHCIPort</string>
-				<key>Replace</key>
-				<data>iciD4P5mhckPmMFBCMyQkJCQdQs=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>something 'bout USB</string>
 				<key>Disabled</key>
 				<false/>
@@ -449,7 +437,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C025233104NGF2CAD</string>
+		<string>C02S3AYLG85YF2C1F</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -486,9 +474,9 @@
 		<key>ProductName</key>
 		<string>MacBookPro11,5</string>
 		<key>SerialNumber</key>
-		<string>C02PTAYHG85Y</string>
+		<string>C02S3AYLG85Y</string>
 		<key>SmUUID</key>
-		<string>A2C91E52-8658-4756-B1D6-3F7EF5276B76</string>
+		<string>40C82370-E226-5A06-8227-E3A30155E049</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
