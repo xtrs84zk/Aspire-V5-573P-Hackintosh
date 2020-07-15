@@ -67,12 +67,12 @@ defaults write com.apple.appstore.commerce Storefront -string \
 * Brightness control. <br/>
 * Audio with VoodooHDA. <br/>
 * HDMI video output. <br/>
-* Siri.
+* Siri. <br/>
+* Microphone.
 
 ## What's sometimes working
 * Some Fn keys migth have diferent behavior. (Fn + F12 lowers brightness and 'Pausa' increments it)
 * HDMI audio output. (VoodooHDA thing, maybe (?))
-* Microphone gain needs to be adjusted (lowered) using the VoodooPrefpanel. (Download from [here](https://sourceforge.net/projects/voodoohda/files/VoodooHDA.prefPane.zip/download?use_mirror=cfhcable&download=&failedmirror=jaist.dl.sourceforge.net) and copy to /Library/PreferencePanes/ then look for it on System Preferences)
 
 ## What's not working
 * Power off. (Restart to clover and press the power button) <br/>
