@@ -9,11 +9,11 @@ EFI and resources for doing hackintosh on the Acer Aspire V5-573P-74508G1. This 
 
 - It boots!.
 
-- Using OpenCore 6.0 (Compiled by me, still in beta as the day of this commit)
+- Using OpenCore 6.0 @[fd33d8e](https://github.com/acidanthera/OpenCorePkg/commit/fd33d8e2419ebbf7651780655bc6329cb5383f2f) (Compiled by me, still in beta as the day of this commit)
 
   ![Bootloader](./assets/bootloader.png)
 
-- Should boot Big Sur, just not the installer yet. Working on it.
+- Doesn't boot Big Sur, specially not the installer. Working on it.
 
 ## Instructions
 
@@ -39,9 +39,9 @@ Then set it on System Preferences.
 
 3. Configure your serial number, uuid, and other identifiers. The ones on the plist are a scramble of the ones I'm using. As for how to configure it, the correct way is described in [this section](https://dortania.github.io/OpenCore-Desktop-Guide/post-install/iservices) of the guide.
 
-4. Reboot a couple of times to let it sit.
+3. Reboot a couple of times to let it sit.
 
-5. Hardcode your wifi SSID in the itlwm.kext -> ctrl + click -> Show Package Contents -> Info.plist and it will autoconnect. Alternatively, try [Heliport](https://github.com/zxystd/HeliPort).
+   1. Hardcode your wifi SSID in the config.plist -> NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> WiFi-SSID && WiFi-PW and it will autoconnect. Alternatively, try the  [Heliport](https://github.com/zxystd/HeliPort) app with the [itlwm](https://github.com/OpenIntelWireless/itlwm) kext.
 
    ![Wifi configuration](./assets/wifi.png)
 
@@ -60,7 +60,7 @@ defaults write com.apple.appstore.commerce Storefront -string \
 * USB ports <br/>
 * Integrated Graphics <br/>
 * Trackpad (With gestures) <br/>
-* Wifi (The Intel card I got, hardcode the credentials in the kext) <br/>
+* Wifi (The Intel card I got, credentials on nvram) <br/>
 * Bluetooth.
 * Touchscreen (With the same gestures as the trackpad, even on Catalina!) <br/>
 * Keyboard backligth. Fn5, Fn6, Fn7, Fn9, Fn8 as expected. <br/>
