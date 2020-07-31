@@ -9,7 +9,7 @@ EFI and resources for doing hackintosh on the Acer Aspire V5-573P-74508G1. This 
 
 - It boots!.
 
-- Using OpenCore 6.0 @[fd33d8e](https://github.com/acidanthera/OpenCorePkg/commit/fd33d8e2419ebbf7651780655bc6329cb5383f2f) (Compiled by me, still in beta as the day of this commit)
+- Using OpenCore 6.0 @[1bc2fb3eea1e082fd547cbbf5f9ae870dabbfa97](https://github.com/acidanthera/OpenCorePkg/commit/1bc2fb3eea1e082fd547cbbf5f9ae870dabbfa97) (Compiled by me, still in beta as the day of this commit)
 
   ![Bootloader](./assets/bootloader.png)
 
