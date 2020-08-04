@@ -4,7 +4,8 @@ EFI and resources for doing hackintosh on the Acer Aspire V5-573P-74508G1.
 Tested on:
 
 - Mojave 14.0 -> 14.6
-- Catalina 15.0 -> 15.3 (15.4 ain't booting, it migth work on [OpenCore](https://github.com/xtrs84zk/Aspire-V5-573P-Hackintosh/tree/OpenCore), though)
+- Catalina 15.0 -> 15.6
+-  (11 haven't been tested, it migth work on [OpenCore](https://github.com/xtrs84zk/Aspire-V5-573P-Hackintosh/tree/OpenCore), though)
 
 ![Screenshot](screenshot.png)
 ## Instructions
@@ -14,7 +15,10 @@ Tested on:
 4. Feel free to reach out if you need any help or found how to fix something. [Telegram](https://t.me/xtrs84zk) | [Twitter](https://twitter.com/xtrs84zk) 
 
 ## Post Installation
+If using the same Intel Wireless card, install [Heliport](https://github.com/OpenIntelWireless/HeliPort/releases) to the Applications folder and add it to the login items.
+
 Per Vanilla method, there shouldn't be any "special" needs, in case your setup differs from the one used by this guide, place the needed kext on /Library/Extensions and run
+
 ```bash
 sudo kextcache -i / 
 ```
@@ -27,7 +31,7 @@ Thanks to neosergio for [this](https://github.com/neosergio/Latam-Keyboard).
 git clone https://github.com/neosergio/Latam-Keyboard.git && cd Latam-Keyboard && cp -v Latam*.* ~/Library/Keyboard\ Layouts/
 ```
 
-Download [Clover Configurator](https://mackie100projects.altervista.org/download-clover-configurator/) and configure your serial number, uuid, and other identifiers. Don't forget to write a MAC on EFI/CLOVER/ACPI/patched/SSDT-RMNE.aml for Siri and iMessage. The ones on the plist are a scramble of the ones I'm using. As for how to configure it, the correct way is described here: [An iDiot's Guide To iMessage](https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/) .
+Download [Clover Configurator](https://mackie100projects.altervista.org/download-clover-configurator/) and configure your serial number, uuid, and other identifiers. ([Propertree](https://github.com/corpnewt/ProperTree) can be used too) ~~Don't forget to write a MAC on EFI/CLOVER/ACPI/patched/SSDT-RMNE.aml for Siri and iMessage~~. The ones on the plist are a scramble of the ones I'm using. As for how to configure it, the correct way is described here: [An iDiot's Guide To iMessage](https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/) .
 
 ## Some fixes
 
@@ -42,27 +46,30 @@ defaults write com.apple.appstore.commerce Storefront -string \
 
 ## What's working
 * USB ports <br/>
-* Sleep <br/>
 * Integrated Graphics <br/>
 * Battery indicator <br/>
-* RAM, CPU. <br/>
 * Trackpad (with gestures) <br/>
 * Keyboard backligth <br/>Fn5, Fn6, Fn7, Fn9, Fn8 as expected. <br/>
 * Some Fn keys migth have diferent behavior.
 * Audio with VoodooHDA. 
 * Brightness. Use "pausa" to up the level and Fn+F12 to lower it. (Working on setting the rigth keycombo)
-* Touchscreen (before Catalina, working fine on Mojave: same gestures as the trackpad) <br/>
+* Touchscreen, same gestures as trackpad. <br/>
 * Siri, Nice. <br/>
+* Microphone. <br/>
+* Wifi  / Bluetooth
 
 ## What's sometimes working
-* HDMI video output ~~(it worked on Mojave, as far as I can remember)~~ guess what? I'm back in Mojave and it doesn't work... but I remember it did.<br/>
-* It migth freeze the next couple of reboots after a System Update, that's why it's advised to always do a clean install rather than upgrade. Don't worry, it'll go back to normal after that. <br/>
-* Microphone. Well, it works, but is way too boosted.
+* Sleep. It's rare when it doesn't. <br/>
 
 ## What's not working
 * Power off. (Restart to clover and press the power button) <br/>
-* Wifi / Bluetooth (Using bluetooth from an Intel card and Ethernet myself) <br/>
-* HDMI audio output. (never tried, I asume it never worked)
+* HDMI video output.
+* HDMI audio output.
+
+## Hardware changes
+
+- Wireless card replaced with an Intel AC 3165
+- Internal HDD replaced with an SSD
 
 ## Contributing
 

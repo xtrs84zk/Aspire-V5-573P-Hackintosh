@@ -61,16 +61,16 @@
 				<key>WiFi_1</key>
 				<dict>
 					<key>password</key>
-					<string>Aguacate76c</string>
+					<string>passID</string>
 					<key>ssid</key>
-					<string>xtrs84zk</string>
+					<string>wifi2</string>
 				</dict>
 				<key>WiFi_2</key>
 				<dict>
 					<key>password</key>
-					<string>Aguacate76c</string>
+					<string>passid</string>
 					<key>ssid</key>
-					<string>xtrs84zkParents</string>
+					<string>wifi</string>
 				</dict>
 				<key>WiFi_3</key>
 				<dict>

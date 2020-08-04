@@ -69,7 +69,7 @@
 				<key>PCM</key>
 				<integer>100</integer>
 				<key>Rec</key>
-				<integer>90</integer>
+				<integer>12</integer>
 				<key>iGain</key>
 				<integer>90</integer>
 				<key>iMix</key>
