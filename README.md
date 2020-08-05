@@ -5,7 +5,7 @@ Tested on:
 
 - Mojave 14.0 -> 14.6
 - Catalina 15.0 -> 15.6
--  (11 haven't been tested, it migth work on [OpenCore](https://github.com/xtrs84zk/Aspire-V5-573P-Hackintosh/tree/OpenCore), though)
+-  11 boots existing installs (Fixing install on [the OpenCore branch](https://github.com/xtrs84zk/Aspire-V5-573P-Hackintosh/tree/OpenCore) , though) just tried beta1 (20A4299v).
 
 ![Screenshot](screenshot.png)
 ## Instructions
@@ -15,23 +15,21 @@ Tested on:
 4. Feel free to reach out if you need any help or found how to fix something. [Telegram](https://t.me/xtrs84zk) | [Twitter](https://twitter.com/xtrs84zk) 
 
 ## Post Installation
-If using the same Intel Wireless card, install [Heliport](https://github.com/OpenIntelWireless/HeliPort/releases) to the Applications folder and add it to the login items.
+- If using the same Intel Wireless card, install [Heliport](https://github.com/OpenIntelWireless/HeliPort/releases) to the Applications folder and add it to the login items.
 
-Per Vanilla method, there shouldn't be any "special" needs, in case your setup differs from the one used by this guide, place the needed kext on /Library/Extensions and run
 
-```bash
-sudo kextcache -i / 
-```
-or... move them to /EFI/Clover/kexts/Others and don't run anything :)
+- Move any custom kext to /EFI/Clover/kexts/Others.
 
-For keyboard layout (the latin american one) - Using A layout. <br/>
-Thanks to neosergio for [this](https://github.com/neosergio/Latam-Keyboard). 
+
+- For keyboard layout (the latin american one) - Using A layout. <br/>
+  Thanks to neosergio for [this](https://github.com/neosergio/Latam-Keyboard). 
 
 ```bash
 git clone https://github.com/neosergio/Latam-Keyboard.git && cd Latam-Keyboard && cp -v Latam*.* ~/Library/Keyboard\ Layouts/
 ```
 
-Download [Clover Configurator](https://mackie100projects.altervista.org/download-clover-configurator/) and configure your serial number, uuid, and other identifiers. ([Propertree](https://github.com/corpnewt/ProperTree) can be used too) ~~Don't forget to write a MAC on EFI/CLOVER/ACPI/patched/SSDT-RMNE.aml for Siri and iMessage~~. The ones on the plist are a scramble of the ones I'm using. As for how to configure it, the correct way is described here: [An iDiot's Guide To iMessage](https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/) .
+- Download [Clover Configurator](https://mackie100projects.altervista.org/download-clover-configurator/) and configure your serial number, uuid, and other identifiers. ([Propertree](https://github.com/corpnewt/ProperTree) can be used too). The ones on the plist are a scramble of the ones I'm using. As for how to configure it, the correct way is described here: [An iDiot's Guide To iMessage](https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/) .
+
 
 ## Some fixes
 
@@ -62,6 +60,7 @@ defaults write com.apple.appstore.commerce Storefront -string \
 * Sleep. It's rare when it doesn't. <br/>
 
 ## What's not working
+* I don't know why cursor doesn't show up, it can be moved, clicked and so on, it's just invisible.
 * Power off. (Restart to clover and press the power button) <br/>
 * HDMI video output.
 * HDMI audio output.
