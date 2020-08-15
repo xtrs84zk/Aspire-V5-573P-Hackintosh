@@ -49,7 +49,7 @@ Tested on:
 
 - If using the same Intel Wireless card, install [Heliport](https://github.com/OpenIntelWireless/HeliPort/releases) to the Applications folder and add it to the login items.
 
-  ![Heliport_post1](/Users/xtrs84zk/Documents/Aspire-V5-573P-Hackintosh/assets/Heliport_post1.png)
+  ![Heliport_post1](./assets/Heliport_post1.png)
 
 ### Custom kexts.
 
@@ -67,7 +67,7 @@ git clone https://github.com/neosergio/Latam-Keyboard.git && cd Latam-Keyboard &
 
 Then, select the B layout in System Preferences -> Keyboard -> Input Sources.
 
-![keyboardlayout_post1](/Users/xtrs84zk/Documents/Aspire-V5-573P-Hackintosh/assets/keyboardlayout_post1.png)
+![keyboardlayout_post1](./assets/keyboardlayout_post1.png)
 
 If the default layout keeps overwriting the custom one, remove it from the file 
 
@@ -77,7 +77,7 @@ If the default layout keeps overwriting the custom one, remove it from the file
 
 [Propertree](https://github.com/corpnewt/ProperTree) is useful for this.
 
-![keyboardlayout_post2](/Users/xtrs84zk/Documents/Aspire-V5-573P-Hackintosh/assets/keyboardlayout_post2.png)
+![keyboardlayout_post2](./assets/keyboardlayout_post2.png)
 
 ### iMessage and FaceTime
 
@@ -91,7 +91,7 @@ If the default layout keeps overwriting the custom one, remove it from the file
 git clone https://github.com/corpnewt/MountEFI.git && ./MountEFI/MountEFI.command
 ```
 
-![mountEFI_post1](/Users/xtrs84zk/Documents/Aspire-V5-573P-Hackintosh/assets/mountEFI_post1.png)
+![mountEFI_post1](./assets/mountEFI_post1.png)
 
 
 ## Some fixes
