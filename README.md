@@ -19,8 +19,8 @@ Tested on:
 * Integrated Graphics <br/>
 * Battery indicator <br/>
 * Trackpad (with gestures) <br/>
-* Keyboard backligth <br/>Fn5, Fn6, Fn7, Fn9, Fn8 as expected. <br/>
-* Some Fn keys migth have diferent behavior.
+* Keyboard backligth <br/>
+* Some Fn keys might have diferent behavior. (Fn5, Fn6, Fn7, Fn9, Fn8 as expected. )
 * Audio with VoodooHDA. 
 * Brightness. Use "pausa" to up the level and Fn+F12 to lower it. (Working on setting the rigth keycombo)
 * Touchscreen, same gestures as trackpad. <br/>
