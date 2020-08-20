@@ -411,96 +411,66 @@
 		<true/>
 		<key>KernelToPatch</key>
 		<array>
-		<dict>
-                <key>Comment</key>
-                <string>KbeBS-EXT (kuckkuck)</string>
-                <key>Count</key>
-                <integer>1</integer>
-                <key>Disabled</key>
-                <false/>
-                <key>Find</key>
-                <data>
-                6NQAAADrBeg=
-                </data>
-                <key>MaskFind</key>
-                <data>
-                /wD///////8=
-                </data>
-                <key>MaskReplace</key>
-                <data>
-                AAAAAAD///8=
-                </data>
-                <key>MatchOS</key>
-                <string>10.16</string>
-                <key>Replace</key>
-                <data>
-                6NQAAACQkOg=
-                </data>
-                <key>StartPattern</key>
-                <data>
-                AQAx/74UAAU=
-                </data>
-            </dict>
-            <dict>
-                <key>Comment</key>
-                <string>KbeBS-SIP (kuckkuck)</string>
-                <key>Count</key>
-                <integer>1</integer>
-                <key>Disabled</key>
-                <false/>
-                <key>Find</key>
-                <data>
-                6HXmDgCFwA+E+gAAAEmLRQ==
-                </data>
-                <key>MaskFind</key>
-                <data>
-                /wAAAP//////AP///////w==
-                </data>
-                <key>MaskReplace</key>
-                <data>
-                AAAAAAAAAP///////wAAAA==
-                </data>
-                <key>MatchOS</key>
-                <string>10.16</string>
-                <key>Replace</key>
-                <data>
-                6HXmDgCFwJCQkJCQkEmLRQ==
-                </data>
-                <key>StartPattern</key>
-                <data>
-                AgAAQb8BAADc
-                </data>
-            </dict>
-            <dict>
-                <key>Comment</key>
-                <string>KbeBS-KxldUnmap (vit9696, kuckkuck)</string>
-                <key>Count</key>
-                <integer>1</integer>
-                <key>Disabled</key>
-                <false/>
-                <key>Find</key>
-                <data>
-                /4A9JZxOAAAPhRcBAABB
-                </data>
-                <key>MaskFind</key>
-                <data>
-                ////AAAA/////wD/////
-                </data>
-                <key>MaskReplace</key>
-                <data>
-                AAAAAAAAAAD//wAAAAAA
-                </data>
-                <key>MatchOS</key>
-                <string>10.16</string>
-                <key>Replace</key>
-                <data>
-                /4A9JZxOAACQ6RcBAABB
-                </data>
-                <key>StartPattern</key>
-                <data>
-                SI0VKyYlAA==
-                </data>
-            </dict>
+			<dict>
+				<key>Comment</key>
+				<string>KbeBS-EXT (kuckkuck)</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>6NQAAADrBeg=</data>
+				<key>MaskFind</key>
+				<data>/wD///////8=</data>
+				<key>MaskReplace</key>
+				<data>AAAAAAD///8=</data>
+				<key>MatchOS</key>
+				<string>10.16</string>
+				<key>Replace</key>
+				<data>6NQAAACQkOg=</data>
+				<key>StartPattern</key>
+				<data>AQAx/74UAAU=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>KbeBS-SIP (kuckkuck)</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>6HXmDgCFwA+E+gAAAEmLRQ==</data>
+				<key>MaskFind</key>
+				<data>/wAAAP//////AP///////w==</data>
+				<key>MaskReplace</key>
+				<data>AAAAAAAAAP///////wAAAA==</data>
+				<key>MatchOS</key>
+				<string>10.16</string>
+				<key>Replace</key>
+				<data>6HXmDgCFwJCQkJCQkEmLRQ==</data>
+				<key>StartPattern</key>
+				<data>AgAAQb8BAADc</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>KbeBS-KxldUnmap (vit9696, kuckkuck)</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>/4A9JZxOAAAPhRcBAABB</data>
+				<key>MaskFind</key>
+				<data>////AAAA/////wD/////</data>
+				<key>MaskReplace</key>
+				<data>AAAAAAAAAAD//wAAAAAA</data>
+				<key>MatchOS</key>
+				<string>10.16</string>
+				<key>Replace</key>
+				<data>/4A9JZxOAACQ6RcBAABB</data>
+				<key>StartPattern</key>
+				<data>SI0VKyYlAA==</data>
+			</dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>
@@ -512,7 +482,7 @@
 		<key>CsrActiveConfig</key>
 		<string>0x067</string>
 	</dict>
-		<key>SMBIOS</key>
+	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
 		<string>07/22/2019</string>
