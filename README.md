@@ -7,13 +7,12 @@ EFI and resources for doing hackintosh on the Acer Aspire V5-573P-74508G1. This 
 
 ## Status
 
-- It boots!.
+- It boots! **EVEN BIG SUR**, installer and all. SIP enabled.
 
-- Using OpenCore 6.0 @[1bc2fb3eea1e082fd547cbbf5f9ae870dabbfa97](https://github.com/acidanthera/OpenCorePkg/commit/1bc2fb3eea1e082fd547cbbf5f9ae870dabbfa97) (Compiled by me, still in beta as the day of this commit)
+- Using OpenCore 6.1
 
   ![Bootloader](./assets/bootloader.png)
 
-- Doesn't boot Big Sur, specially not the installer. Working on it.
 
 ## Instructions
 
@@ -33,7 +32,7 @@ Then set it on System Preferences.
 
 ![Keyboard settings](./assets/keyboard.png)
 
-1. Use xzhih's [script](https://github.com/xzhih/one-key-hidpi) to enable hidpi. (Recommended)
+1. Use xzhih's [script](https://github.com/xzhih/one-key-hidpi) to enable hidpi. (Recommended, needs to disable SIP)
 
    ![hidpi](./assets/hidpi.png)
 
@@ -41,9 +40,6 @@ Then set it on System Preferences.
 
 3. Reboot a couple of times to let it sit.
 
-   1. Hardcode your wifi SSID in the config.plist -> NVRAM -> Add -> 7C436110-AB2A-4BBB-A880-FE41995C9F82 -> WiFi-SSID && WiFi-PW and it will autoconnect. Alternatively, try the  [Heliport](https://github.com/zxystd/HeliPort) app with the [itlwm](https://github.com/OpenIntelWireless/itlwm) kext.
-
-   ![Wifi configuration](./assets/wifi.png)
 
 ## Some fixes
 
@@ -60,26 +56,26 @@ defaults write com.apple.appstore.commerce Storefront -string \
 * USB ports <br/>
 * Integrated Graphics <br/>
 * Trackpad (With gestures) <br/>
-* Wifi (The Intel card I got, credentials on nvram) <br/>
+* Wifi as a native card. But no AirDrop or special features.<br/>
 * Bluetooth.
-* Touchscreen (With the same gestures as the trackpad, even on Catalina!) <br/>
 * Keyboard backligth. Fn5, Fn6, Fn7, Fn9, Fn8 as expected. <br/>
 * Brightness control. <br/>
-* Audio with VoodooHDA. <br/>
+* Audio. <br/>
 * HDMI video output. <br/>
 * Siri. <br/>
 * Microphone.
+* Battery indicator. <br/>
 
 ## What's sometimes working
 * Some Fn keys migth have diferent behavior. (Fn + F12 lowers brightness and 'Pausa' increments it)
-* HDMI audio output. (VoodooHDA thing, maybe (?))
-
-## What's not working
+* Camera is DIM, works on well lit rooms.
+* Sleep (OpenCore's sleep is way harder.) <br/>
 * Power off. (Restart to clover and press the power button) <br/>
 
-* Sleep (OpenCore's sleep is way harder.) <br/>
+## What's not working
+* Touchscreen (Big Sur doesn't like VoodooI2C), go back to [ad85ba](https://github.com/xtrs84zk/Aspire-V5-573P-Hackintosh/commit/ad85baa75662148a61e47ba679cee969b94cf8c0) for the last Catalina with touchscreen. <br/>
 
-* Battery indicator. (OpenCore's battery is **way** harder.) <br/>
+* HDMI audio output. (VoodooHDA thing, maybe (?))
 
   
 
