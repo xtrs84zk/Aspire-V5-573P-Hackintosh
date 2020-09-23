@@ -33,6 +33,10 @@ Then set it on System Preferences.
 ![Keyboard settings](./assets/keyboard.png)
 
 1. Use xzhih's [script](https://github.com/xzhih/one-key-hidpi) to enable hidpi. (Recommended, needs to disable SIP)
+For Big Sur, disable SIP (use the cleanNVRAM option on OpenCore to delete the old key) and use this fork.
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/mlch911/one-key-hidpi/master/hidpi.sh)"
+```
 
    ![hidpi](./assets/hidpi.png)
 
