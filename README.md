@@ -33,7 +33,7 @@ Then set it on System Preferences.
 ![Keyboard settings](./assets/keyboard.png)
 
 1. Use xzhih's [script](https://github.com/xzhih/one-key-hidpi) to enable hidpi. (Recommended, needs to disable SIP)
-For Big Sur, disable SIP (use the cleanNVRAM option on OpenCore to delete the old key) and use this fork.
+For Big Sur, use [this fork](https://github.com/mlch911/one-key-hidpi) that doesn't need access to / nor disabled SIP.
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/mlch911/one-key-hidpi/master/hidpi.sh)"
 ```
@@ -73,8 +73,8 @@ defaults write com.apple.appstore.commerce Storefront -string \
 ## What's sometimes working
 * Some Fn keys migth have diferent behavior. (Fn + F12 lowers brightness and 'Pausa' increments it)
 * Camera is DIM, works on well lit rooms.
-* Sleep (OpenCore's sleep is way harder.) <br/>
-* Power off. (Restart to clover and press the power button) <br/>
+* Sleep (OpenCore's sleep is way harder.) Well, it sleeps. Just KP's it's way back.<br/>
+* Power off. (Restart to OpenCore and press the power button) <br/>
 
 ## What's not working
 * Touchscreen (Big Sur doesn't like VoodooI2C), go back to [ad85ba](https://github.com/xtrs84zk/Aspire-V5-573P-Hackintosh/commit/ad85baa75662148a61e47ba679cee969b94cf8c0) for the last Catalina with touchscreen. <br/>
