@@ -9,17 +9,42 @@ EFI and resources for doing hackintosh on the Acer Aspire V5-573P-74508G1. This 
 
 - It boots! **EVEN BIG SUR**, installer and all. SIP enabled.
 
-- Using OpenCore 6.1
+- Using OpenCore 6.2 33c1bed
 
   ![Bootloader](./assets/bootloader.png)
 
 
 ## Instructions
 
-1. Copy the EFI folder on your installer USB to boot. (Must have a GUID partition table, copy the folder to the 200mb FAT32 one) <br/>
-2. Install macOS. <br/>
-3. Use [MountEFI](https://github.com/corpnewt/MountEFI) to mount the ESP on the internal disk of your system and copy the EFI contents to it.<br/>
-4. Feel free to reach out if you need any help or found how to fix something. [Telegram](https://t.me/xtrs84zk) | [Twitter](https://twitter.com/xtrs84zk) 
+1. Format an USB with at least 16gb. USB 2.0 is easier than 3.0. Format it as hfs+ on a GPT map.
+
+2. Get the installer .app from Apple and run as said in [this page](https://support.apple.com/en-us/HT201372).
+
+   ```bash
+   sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume
+   ```
+
+3. Copy the EFI folder on your installer USB to boot. (Must have a GUID partition table, copy the folder to the 200mb FAT32 one) <br/>
+
+   ```bash
+   # Run MountEFI to mount the EFI partition on the USB.
+   git clone https://github.com/corpnewt/MountEFI && cd MountEFI && chmod +x MountEFI.command && ./MountEFI.command
+   ```
+
+   
+
+4. Boot the installer and install macOS. <br/>
+
+5. Use [MountEFI](https://github.com/corpnewt/MountEFI) to mount the ESP on the internal disk of your system and copy the EFI contents to it.<br/>
+
+   ```bash
+   # Cloning MountEFI to the new system and using it to mount internal EFI
+   git clone https://github.com/corpnewt/MountEFI && chmod +x /MountEFI/MountEFI.command && sudo python3 MountEFI/MountEFI.command disk0 && open /Volumes/EFI/
+   ```
+
+   
+
+6. Feel free to reach out if you need any help or found how to fix something. [Telegram](https://t.me/xtrs84zk) | [Twitter](https://twitter.com/xtrs84zk) 
 
 ## Post Installation
 1. For keyboard layout (the latin american one) - Using B layout. 
@@ -32,8 +57,8 @@ Then set it on System Preferences.
 
 ![Keyboard settings](./assets/keyboard.png)
 
-1. Use xzhih's [script](https://github.com/xzhih/one-key-hidpi) to enable hidpi. (Recommended, needs to disable SIP)
-For Big Sur, use [this fork](https://github.com/mlch911/one-key-hidpi) that doesn't need access to / nor disabled SIP.
+2. ~~Use xzhih's [script](https://github.com/xzhih/one-key-hidpi) to enable hidpi.~~ For Big Sur, use [this fork](https://github.com/mlch911/one-key-hidpi) that does not need access to / nor disabled SIP.
+
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/mlch911/one-key-hidpi/master/hidpi.sh)"
 ```
@@ -60,9 +85,9 @@ defaults write com.apple.appstore.commerce Storefront -string \
 * USB ports <br/>
 * Integrated Graphics <br/>
 * Trackpad (With gestures) <br/>
-* Wifi as a native card. But no AirDrop or special features.<br/>
+* Wifi as emulated card. Works well most of the time.<br/>
 * Bluetooth.
-* Keyboard backligth. Fn5, Fn6, Fn7, Fn9, Fn8 as expected. <br/>
+* Keyboard backligth. Fn3, Fn5, Fn6, Fn7, Fn9, Fn8 as expected. <br/>
 * Brightness control. <br/>
 * Audio. <br/>
 * HDMI video output. <br/>
@@ -79,9 +104,8 @@ defaults write com.apple.appstore.commerce Storefront -string \
 ## What's not working
 * Touchscreen (Big Sur doesn't like VoodooI2C), go back to [ad85ba](https://github.com/xtrs84zk/Aspire-V5-573P-Hackintosh/commit/ad85baa75662148a61e47ba679cee969b94cf8c0) for the last Catalina with touchscreen. <br/>
 
-* HDMI audio output. (VoodooHDA thing, maybe (?))
+* HDMI audio output. (VoodooHDA thing, might try AppleALC again)
 
-  
 
 ## Contributing
 
