@@ -94,6 +94,7 @@ defaults write com.apple.appstore.commerce Storefront -string \
 * Siri. <br/>
 * Microphone.
 * Battery indicator. <br/>
+* HDMI audio output. (Thanks AppleALC) ✨
 
 ## What's sometimes working
 * Some Fn keys migth have diferent behavior. (Fn + F12 lowers brightness and 'Pausa' increments it)
@@ -104,7 +105,6 @@ defaults write com.apple.appstore.commerce Storefront -string \
 ## What's not working
 * Touchscreen (Big Sur doesn't like VoodooI2C), go back to [ad85ba](https://github.com/xtrs84zk/Aspire-V5-573P-Hackintosh/commit/ad85baa75662148a61e47ba679cee969b94cf8c0) for the last Catalina with touchscreen. <br/>
 
-* HDMI audio output. (VoodooHDA thing, might try AppleALC again)
 
 
 ## Contributing
