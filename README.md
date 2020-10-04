@@ -66,8 +66,15 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/mlch911/one-key-hidpi/ma
    ![hidpi](./assets/hidpi.png)
 
 3. Configure your serial number, uuid, and other identifiers. The ones on the plist are a scramble of the ones I'm using. As for how to configure it, the correct way is described in [this section](https://dortania.github.io/OpenCore-Desktop-Guide/post-install/iservices) of the guide.
-
 3. Reboot a couple of times to let it sit.
+
+## Updating
+
+For beta 9, go to config.plist => Misc -> Security ->  SecureBootModel and set it to 'Disabled'
+
+After the update, set it back to 'Default'
+
+![](./assets/miscSec.png)
 
 
 ## Some fixes
@@ -84,26 +91,27 @@ defaults write com.apple.appstore.commerce Storefront -string \
 ## What's working
 * USB ports <br/>
 * Integrated Graphics <br/>
-* Trackpad (With gestures) <br/>
+* Trackpad. <br/>
 * Wifi as emulated card. Works well most of the time.<br/>
 * Bluetooth.
 * Keyboard backligth. Fn3, Fn5, Fn6, Fn7, Fn9, Fn8 as expected. <br/>
-* Brightness control. <br/>
+* Brightness control. (Fn + F12 lowers brightness and 'Pausa' increments it) <br/>
 * Audio. <br/>
 * HDMI video output. <br/>
 * Siri. <br/>
 * Microphone.
 * Battery indicator. <br/>
 * HDMI audio output. (Thanks AppleALC) ✨
+* Touchscreen. (Fixed in [49e964d](https://github.com/xtrs84zk/Aspire-V5-573P-Hackintosh/commit/49e964d14a710e8d910d21bc44129fd3943be5ad))
 
 ## What's sometimes working
-* Some Fn keys migth have diferent behavior. (Fn + F12 lowers brightness and 'Pausa' increments it)
+* Some Fn keys migth have diferent behavior. 
 * Camera is DIM, works on well lit rooms.
-* Sleep (OpenCore's sleep is way harder.) Well, it sleeps. Just KP's it's way back.<br/>
-* Power off. (Restart to OpenCore and press the power button) <br/>
+* Sleep (OpenCore's sleep is way harder.) 
 
 ## What's not working
-* Touchscreen (Big Sur doesn't like VoodooI2C), go back to [ad85ba](https://github.com/xtrs84zk/Aspire-V5-573P-Hackintosh/commit/ad85baa75662148a61e47ba679cee969b94cf8c0) for the last Catalina with touchscreen. <br/>
+* Power off. (Restart to OpenCore and press the power button) <br/>
+* Wake... Well, it sleeps. Just KP's it's way back.<br/>
 
 
 
