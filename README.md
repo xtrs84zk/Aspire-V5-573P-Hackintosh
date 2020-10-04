@@ -1,97 +1,80 @@
 # Aspire V5-573P Hackintosh
-EFI and resources for doing hackintosh on the Acer Aspire V5-573P-74508G1.
+## OpenCore branch (WIP)
 
-Tested on:
+EFI and resources for doing hackintosh on the Acer Aspire V5-573P-74508G1. This branch is based on the work by Dortania on the [OpenCore Laptop Vanilla Guide](https://dortania.github.io/vanilla-laptop-guide/)
 
-- Mojave 10.14.0 -> 10.14.6
-- Catalina 10.15.0 -> 10.15.6
--  Big Sur 11 boots existing installs (Fixing install on [the OpenCore branch](https://github.com/xtrs84zk/Aspire-V5-573P-Hackintosh/tree/OpenCore) , though) just tried beta1 (20A4299v).
+![Screenshot](./assets/screenshot.png)
 
-![Screenshot](assets/screenshot.png)
+## Status
+
+- It boots! **EVEN BIG SUR**, installer and all. SIP enabled.
+
+- Using OpenCore 6.2 33c1bed
+
+  ![Bootloader](./assets/bootloader.png)
+
+
 ## Instructions
-1. Copy the EFI folder on your installer's USB to boot. <br/>
-2. Install macOS. <br/>
-3. If something fails, refer to [RehabMan's guide](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/) for laptops. <br/>
-4. Feel free to reach out if you need any help or found how to fix something. [Telegram](https://t.me/xtrs84zk) | [Twitter](https://twitter.com/xtrs84zk) 
 
-## What's working
-* USB ports <br/>
-* Integrated Graphics <br/>
-* Battery indicator <br/>
-* Trackpad (with gestures) <br/>
-* Keyboard backligth <br/>
-* Some Fn keys might have diferent behavior. (Fn5, Fn6, Fn7, Fn9, Fn8 as expected. )
-* Audio with VoodooHDA. 
-* Brightness. Use "pausa" to up the level and Fn+F12 to lower it. (Working on setting the rigth keycombo)
-* Touchscreen, same gestures as trackpad. <br/>
-* Siri, Nice. <br/>
-* Microphone. <br/>
-* Wifi  / Bluetooth
+1. Format an USB with at least 16gb. USB 2.0 is easier than 3.0. Format it as hfs+ on a GPT map.
 
-## What's sometimes working
-* Sleep. It's rare when it doesn't. <br/>
+2. Get the installer .app from Apple and run as said in [this page](https://support.apple.com/en-us/HT201372).
 
-## What's not working
-* ~~I don't know why cursor doesn't show up, it can be moved, clicked and so on, it's just invisible~~. (This just happens on the first beta of Big Sur)
-* Power off. (Restart to clover and press the power button) <br/>
-* HDMI video output.
-* HDMI audio output.
-* SD card slot.
+   ```bash
+   sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume
+   ```
 
-## Hardware changes
+3. Copy the EFI folder on your installer USB to boot. (Must have a GUID partition table, copy the folder to the 200mb FAT32 one) <br/>
 
-- Wireless card replaced with an Intel AC 3165
-- Internal HDD replaced with an SSD
+   ```bash
+   # Run MountEFI to mount the EFI partition on the USB.
+   git clone https://github.com/corpnewt/MountEFI && cd MountEFI && chmod +x MountEFI.command && ./MountEFI.command
+   ```
+
+   
+
+4. Boot the installer and install macOS. <br/>
+
+5. Use [MountEFI](https://github.com/corpnewt/MountEFI) to mount the ESP on the internal disk of your system and copy the EFI contents to it.<br/>
+
+   ```bash
+   # Cloning MountEFI to the new system and using it to mount internal EFI
+   git clone https://github.com/corpnewt/MountEFI && chmod +x /MountEFI/MountEFI.command && sudo python3 MountEFI/MountEFI.command disk0 && open /Volumes/EFI/
+   ```
+
+   
+
+6. Feel free to reach out if you need any help or found how to fix something. [Telegram](https://t.me/xtrs84zk) | [Twitter](https://twitter.com/xtrs84zk) 
 
 ## Post Installation
-
-### Network
-
-- If using the same Intel Wireless card, install [Heliport](https://github.com/OpenIntelWireless/HeliPort/releases) to the Applications folder and add it to the login items.
-
-  ![Heliport_post1](./assets/Heliport_post1.png)
-
-### Custom kexts.
-
-
-- Move any custom kext to /EFI/Clover/kexts/Others.
-
-### Keyboard layout
-
-
-- For keyboard layout (the latin american one), use this in terminal. <br/>
+1. For keyboard layout (the latin american one) - Using B layout. 
 
 ```bash
 git clone https://github.com/neosergio/Latam-Keyboard.git && cd Latam-Keyboard && cp -v Latam*.* ~/Library/Keyboard\ Layouts/
 ```
 
-Then, select the B layout in System Preferences -> Keyboard -> Input Sources.
+Then set it on System Preferences.
 
-![keyboardlayout_post1](./assets/keyboardlayout_post1.png)
+![Keyboard settings](./assets/keyboard.png)
 
-If the default layout keeps overwriting the custom one, remove it from the file 
-
-```bash
-~/Library/Preferences/com.apple.HIToolbox.plist
-```
-
-[Propertree](https://github.com/corpnewt/ProperTree) is useful for this.
-
-![keyboardlayout_post2](./assets/keyboardlayout_post2.png)
-
-### iMessage and FaceTime
-
-- Download [Clover Configurator](https://mackie100projects.altervista.org/download-clover-configurator/) and configure your serial number, uuid, and other identifiers. ([Propertree](https://github.com/corpnewt/ProperTree) can be used too). The ones on the plist are a scramble of the ones I'm using. As for how to configure it, the correct way is described here: [An iDiot's Guide To iMessage](https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/) .
-
-### Booting without USB
-
-- Use MountEFI to copy this EFI to the target EFI
+2. ~~Use xzhih's [script](https://github.com/xzhih/one-key-hidpi) to enable hidpi.~~ For Big Sur, use [this fork](https://github.com/mlch911/one-key-hidpi) that does not need access to / nor disabled SIP.
 
 ```bash
-git clone https://github.com/corpnewt/MountEFI.git && ./MountEFI/MountEFI.command
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/mlch911/one-key-hidpi/master/hidpi.sh)"
 ```
 
-![mountEFI_post1](./assets/mountEFI_post1.png)
+   ![hidpi](./assets/hidpi.png)
+
+3. Configure your serial number, uuid, and other identifiers. The ones on the plist are a scramble of the ones I'm using. As for how to configure it, the correct way is described in [this section](https://dortania.github.io/OpenCore-Desktop-Guide/post-install/iservices) of the guide.
+3. Reboot a couple of times to let it sit.
+
+## Updating
+
+For beta 9, go to config.plist => Misc -> Security ->  SecureBootModel and set it to 'Disabled'
+
+After the update, set it back to 'Default'
+
+![](./assets/miscSec.png)
 
 
 ## Some fixes
@@ -105,15 +88,43 @@ defaults write com.apple.appstore.commerce Storefront -string \
     "$(defaults read com.apple.appstore.commerce Storefront | sed s/,8/,13/)"
 ```
 
+## What's working
+* USB ports <br/>
+* Integrated Graphics <br/>
+* Trackpad. <br/>
+* Wifi as emulated card. Works well most of the time.<br/>
+* Bluetooth.
+* Keyboard backligth. Fn3, Fn5, Fn6, Fn7, Fn9, Fn8 as expected. <br/>
+* Brightness control. (Fn + F12 lowers brightness and 'Pausa' increments it) <br/>
+* Audio. <br/>
+* HDMI video output. <br/>
+* Siri. <br/>
+* Microphone.
+* Battery indicator. <br/>
+* HDMI audio output. (Thanks AppleALC) ✨
+* Touchscreen. (Fixed in [49e964d](https://github.com/xtrs84zk/Aspire-V5-573P-Hackintosh/commit/49e964d14a710e8d910d21bc44129fd3943be5ad))
+
+## What's sometimes working
+* Some Fn keys migth have diferent behavior. 
+* Camera is DIM, works on well lit rooms.
+* Sleep (OpenCore's sleep is way harder.) 
+
+## What's not working
+* Power off. (Restart to OpenCore and press the power button) <br/>
+* Wake... Well, it sleeps. Just KP's it's way back.<br/>
+
+
+
 ## Contributing
 
 New fixes are always welcome. Just issue or send a pull request. Don't forget to scramble the serial number and so before the push. 
 
 ## Special thanks
-* [corpnewt](https://github.com/corpnewt) for [USB Map](https://github.com/corpnewt/USBMap) and [MountEFI](https://github.com/corpnewt/MountEFI). <br/>
+* [Acidanthera](https://github.com/acidanthera/VoodooPS2) - For the macOS like trackpad experience, OpenCore and most of the kexts used.
+* [USB Map](https://github.com/corpnewt/USBMap) - corpnewt's tool <br/>
 * [Fewtarius's](https://fewtarius.gitbook.io/laptopguide/) - For the vanilla laptop guide. <br/>
 * [VoodooHDA](https://github.com/chris1111/VoodooHDA-2.9.2-Clover-V14) - Yeah, we hate it, we love it. <br/>
+* [xzhih](https://github.com/xzhih) - For the method to enable HiDPI. <br/>
 * [Hackintool](https://www.tonymacx86.com/threads/release-hackintool-v2-8-6.254559/) - For making it easier on newer releases. <br/>
 * [trs96](https://www.tonymacx86.com/threads/appstore-the-operation-couldnt-be-completed-com-apple-commerce-client-error-500.270957/post-1912788) -  For the solution to error 500 on AppStore. <br/>
-* [Acidanthera](https://github.com/acidanthera/VoodooPS2) - For the macOS like trackpad experience. <br/>
-* [Lri](https://superuser.com/a/712326) - For the fix to the stuck keyboard layout.
+* [neosergio](https://github.com/neosergio) - For the keyboard layout.
