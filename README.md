@@ -9,9 +9,8 @@ EFI and resources for doing hackintosh on the Acer Aspire V5-573P-74508G1. This 
 
 - It boots! **EVEN BIG SUR**, installer and all. SIP enabled.
 
-- Using OpenCore 6.2 33c1bed
+- Using OpenCore 6.3 Release.
 
-  ![Bootloader](./assets/bootloader.png)
 
 
 ## Instructions
